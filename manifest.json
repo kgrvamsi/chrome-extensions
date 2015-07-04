@@ -1,0 +1,22 @@
+{
+  "name":"Hello world",
+  "version":"1.0",
+  "manifest_version": 2,
+
+  "description": "This is a Hello World Porgram",
+  "icons": { "128": "testing.png" },
+  "browser_action": {
+    "default_icon": "testing.png",
+    "default_popup": "hello.html",
+    "default_title": "Hello World"
+  },
+  "content_scripts":[{
+  	"js":["js/background.js"],
+  	"matches":["*://*/*"],
+  	"run_at":"document_start"
+  	}],
+
+  "minimum_chrome_version":"18",
+  "permissions": ["http://*/*", "https://*/*","contextMenus"]
+  
+}
